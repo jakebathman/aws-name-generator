@@ -12,8 +12,14 @@
         <script src="./index.js" defer></script>
 
         <style>
+            html {
+                height: 100%;
+            }
+
             .footer {
-                bottom: env(safe-area-inset-bottom);
+                bottom: 0;
+                padding-bottom: 1rem;
+                padding-bottom: env(safe-area-inset-bottom);
             }
 
             /* Chrome, Safari and Opera */
