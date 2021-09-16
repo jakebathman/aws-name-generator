@@ -202,4 +202,12 @@ class Name {
     }
 }
 
+// Key listener for generating a new name
+document.addEventListener('keydown', function (e) {
+    if (e.code === 'Enter') {
+        new Name().render();
+    }
+});
+
+// Generate a new name now
 new Name().render();
