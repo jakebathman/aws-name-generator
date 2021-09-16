@@ -13,13 +13,30 @@
 
         <style>
             body {
-                height: 100vh;
-                height: calc(var(--vh, 1vh) * 100);
+                min-height: 100vh;
+                /* mobile viewport bug fix */
+                min-height: -webkit-fill-available;
+            }
+
+            html {
+                height: -webkit-fill-available;
+            }
+
+            /* Chrome, Safari and Opera */
+            .no-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+
+            .no-scrollbar {
+                -ms-overflow-style: none;
+                /* IE and Edge */
+                scrollbar-width: none;
+                /* Firefox */
             }
         </style>
     </head>
 
-    <body class="bg-gray-50 dark:bg-gray-900">
+    <body class="bg-gray-50 dark:bg-gray-900 no-scrollbar">
         <div class="container mx-auto px-1 py-6 h-full">
             <div class="w-full flex flex-col justify-between h-full text-center text-gray-800 dark:text-gray-100">
                 <div>
