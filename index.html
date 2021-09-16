@@ -9,14 +9,26 @@
 
         <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 
-        <script src="./index.js"></script>
+        <script src="./index.js" defer></script>
     </head>
 
-    <body>
-        <div class="container mx-auto px-4">
-            <div class="flex flex-wrap justify-center">
-                <div class="w-full max-w-sm">
+    <body class="h-screen">
+        <div class="container mx-auto px-1 py-6 h-full">
+            <div class="w-full flex flex-col justify-between h-full text-center text-gray-800">
+                <div>
                     <div class="text-3xl">AWS Name Generator</div>
+                    <hr>
+                </div>
+
+                <div class="h-2/3">
+                    <div class="mt-4 text-blue-600">Your new AWS service name is</div>
+                    <div class="mt-2 text-4xl sm:text-6xl text-center py-6 break-words" id="result"></div>
+                    <button class="mt-4 px-3 py-2 bg-yellow-500 hover:bg-yellow-600 text-gray-900 rounded-md"
+                        onclick="new Name().render()">Gimme Another</button>
+                </div>
+                <div class="text-gray-500 text-sm mb-3">
+                    Created by <a href="https://twitter.com/jakebathman" target="_blank">@JakeBathman</a> | <a
+                        href="https://github.com/jakebathman/aws-name-generator" target="_blank">Source</a>
                 </div>
             </div>
         </div>

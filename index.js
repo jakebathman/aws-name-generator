@@ -196,11 +196,10 @@ class Name {
 
         return result;
     }
+
+    render() {
+        document.getElementById('result').innerHTML = this.generate();
+    }
 }
 
-var generated;
-
-for (let i = 0; i < 10; i++) {
-    generated = new Name().generate();
-    console.log(generated);
-}
+new Name().render();
