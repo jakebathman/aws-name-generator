@@ -119,9 +119,9 @@ class Name {
 
         this.prefixes = ['Amazon', 'AWS'];
 
-        this.lettersOnlyChance = 8;
+        this.lettersOnlyChance = 15;
         this.nameOnlyChance = 15;
-        this.buildWordChance = 50;
+        this.buildWordChance = 35;
         this.suffixChance = 20;
     }
 
