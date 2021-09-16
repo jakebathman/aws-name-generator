@@ -12,14 +12,8 @@
         <script src="./index.js" defer></script>
 
         <style>
-            body {
-                min-height: 100vh;
-                /* mobile viewport bug fix */
-                min-height: -webkit-fill-available;
-            }
-
-            html {
-                height: -webkit-fill-available;
+            .footer {
+                bottom: env(safe-area-inset-bottom);
             }
 
             /* Chrome, Safari and Opera */
@@ -44,14 +38,15 @@
                     <hr>
                 </div>
 
-                <div class="h-2/3">
+                <div class="h-5/6">
                     <div class="mt-4 text-blue-600 dark:text-blue-300">Your new AWS service name is</div>
                     <div class="mt-2 text-4xl sm:text-6xl text-center py-6 break-words" id="result"></div>
                     <button class="mt-4 px-3 py-2 bg-yellow-500 hover:bg-yellow-600 text-gray-900 rounded-md"
                         onclick="new Name().render()">Gimme Another</button>
                 </div>
-                <div id="height"></div>
-                <div class="text-gray-400 dark:text-gray-600 text-sm mb-3">
+            </div>
+            <div class="footer">
+                <div class="text-center mb-10 text-gray-400 dark:text-gray-600 text-sm">
                     Created by <a href="https://twitter.com/jakebathman" target="_blank">@JakeBathman</a> | <a
                         href="https://github.com/jakebathman/aws-name-generator" target="_blank">Source</a>
                 </div>
